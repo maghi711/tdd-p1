@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import java.util.function.*;
 
 public class App {
+
     public String getGreeting(String args) {
         System.out.println("Aadavan here how are you appa?");
         return args + "\tHello World!";
@@ -17,14 +18,6 @@ public class App {
 
     public static void main(String[] args) {
         String value = (args != null && args.length > 0) ? args[0] : "Aadavan";
-        //System.out.println(new App().getGreeting(value));
-        Predicate<String> name = Objects::nonNull;
-        name = name.or(s -> s.startsWith("A"));
-        name = name.and(s -> s.length() > 5);
-
-        List<String> names = Arrays.asList("Aadavan", "Mahesh");
-        List<String> collect = names.stream().filter(name).collect(Collectors.toList());
-        collect.forEach(System.out::println);
+        System.out.println(new App().getGreeting(value));
     }
-
 }
