@@ -18,6 +18,8 @@ repositories {
 
 dependencies {
 
+    implementation 'io.projectreactor:reactor-core:3.4.9'
+
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13'
 

@@ -12,7 +12,6 @@ import java.util.function.*;
 public class App {
 
     public String getGreeting(String args) {
-        System.out.println("Aadavan here how are you appa?");
         return args + "\tHello World!";
     }
 
