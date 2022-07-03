@@ -14,9 +14,15 @@ public class AppTest {
         App classUnderTest = new App();
         assertThat(classUnderTest).isNotNull();
     }
-    @Test public void testEmptyGreeting() {
+
+    @Test public void testNullNameGreeting() {
         App classUnderTest = new App();
         assertThat(classUnderTest.getGreeting(null)).isEqualTo("null\tHello World!");
+    }
+
+    @Test public void testEmptyNameGreeting() {
+        App classUnderTest = new App();
+        assertThat(classUnderTest.getGreeting("")).isEqualTo("\tHello World!");
     }
 
     @Test public void testPassedInNameWithGreeting() {
